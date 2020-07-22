@@ -18,6 +18,7 @@ Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
 Plug 'tomasr/molokai'
 Plug 'jacoborus/tender'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " -------------------------------------------------------------------------------------------------
@@ -26,7 +27,8 @@ call plug#end()
 " Setting dark mode
 set background=dark
 "colorscheme molokai
-colorscheme tender
+"colorscheme tender
+colorscheme onedark
 set cursorline
 set number
 set tabstop=4
@@ -79,7 +81,8 @@ endif
 " ./install.sh, set "*powerline*" font on your terminal font settings.
 "let g:airline_theme='qwq'
 "let g:airline_theme='molokai'
-let g:airline_theme='tender'
+"let g:airline_theme='tender'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_powerline_fonts = 1
