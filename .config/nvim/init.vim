@@ -17,6 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
 Plug 'tomasr/molokai'
+Plug 'jacoborus/tender'
 call plug#end()
 
 " -------------------------------------------------------------------------------------------------
@@ -24,8 +25,8 @@ call plug#end()
 " -------------------------------------------------------------------------------------------------
 " Setting dark mode
 set background=dark
-"colorscheme torte
-colorscheme molokai
+"colorscheme molokai
+colorscheme tender
 set cursorline
 set number
 set tabstop=4
@@ -76,9 +77,9 @@ endif
 " -------------------------------------------------------------------------------------------------
 " install powerline fonts from https://github.com/powerline/fonts and
 " ./install.sh, set "*powerline*" font on your terminal font settings.
-"let g:airline_theme='minimalist'
 "let g:airline_theme='qwq'
-let g:airline_theme='molokai'
+"let g:airline_theme='molokai'
+let g:airline_theme='tender'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_powerline_fonts = 1
