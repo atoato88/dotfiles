@@ -98,7 +98,8 @@ nnoremap <Right> :vertical resize -2<CR>
 nnoremap <TAB> :bnext<CR>
  " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
-
+" hilight by '*' key and don't jump to next match
+nmap * *N
 
 " -------------------------------------------------------------------------------------------------
 " coc.nvim default settings
@@ -144,6 +145,14 @@ nmap <silent> gr <Plug>(coc-references)
 " Use U to show documentation in preview window
 nnoremap <silent> U :call <SID>show_documentation()<cr>
 
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 " Remap for format selected region
@@ -168,7 +177,10 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<cr>
 
 " Show coc-explorer
 nnoremap <silent> <space>e  :<C-u>CocCommand explorer<cr>
+nnoremap <silent> <space>E  :<C-u>Explore %:p:h<cr>
 
+" Do go vet
+nnoremap <silent> <space>gv  :<C-u>GoVet<cr>
 
 " -------------------------------------------------------------------------------------------------
 " coc-git
