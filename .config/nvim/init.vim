@@ -44,6 +44,10 @@ set ignorecase
 set smartcase
 set incsearch
 
+" create backup and no swapfile because of don't change inode                                                                                                                
+" set backup                                                                                                                                                                   
+" set noswapfile
+
 " transparent background, must present after colorscheme setting.
 " ref: https://sy-base.com/myrobotics/vim/vim-transparent/
 "highlight Normal ctermbg=none
