@@ -12,7 +12,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
@@ -82,14 +81,14 @@ endif
 " airline configurations
 " -------------------------------------------------------------------------------------------------
 " install powerline fonts from https://github.com/powerline/fonts and
-" ./install.sh, set "*powerline*" font on your terminal font settings.
+" ./install.sh, set '*powerline*' font on your terminal font settings.
 "let g:airline_theme='qwq'
 "let g:airline_theme='molokai'
 "let g:airline_theme='tender'
 let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 " -------------------------------------------------------------------------------------------------
 " general keymap
@@ -180,7 +179,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<cr>
 nnoremap <silent> <space>p  :<C-u>CocListResume<cr>
 
 " Show coc-explorer
-nnoremap <silent> <space>e  :<C-u>CocCommand explorer<cr>
+nnoremap <silent> <space>e  :<C-u>CocCommand explorer --sources=buffer+,file+<cr>
 nnoremap <silent> <space>E  :<C-u>Explore %:p:h<cr>
 
 " Do go vet
