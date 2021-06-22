@@ -1,5 +1,7 @@
 {
   "explorer.icon.enableNerdfont": true,
+  // ref: https://github.com/josa42/coc-go/issues/76#issuecomment-678752724
+  "go.goplsArgs": ["-remote=auto", "-logfile", "/tmp/gopls.log"],
   "languageserver": {
     "golang": {
       "command": "gopls",
