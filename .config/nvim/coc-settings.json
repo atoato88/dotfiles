@@ -2,13 +2,14 @@
   "explorer.icon.enableNerdfont": true,
   // ref: https://github.com/josa42/coc-go/issues/76#issuecomment-678752724
   "go.goplsArgs": ["-remote=auto", "-logfile", "/tmp/gopls.log"],
+  "go.goplsPath": "/home/akihito/go/bin/gopls",
   "languageserver": {
     "golang": {
       "command": "gopls",
       //calm down too much memory and cpu consumption on big repository.
       //ref: https://github.com/josa42/coc-go/issues/83#issue-631486225
       //"disableWorkspaceFolders": true,
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      //"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     },
     "bash": {
