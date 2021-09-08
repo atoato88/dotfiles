@@ -6,10 +6,12 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      //calm down too much memory and cpu consumption on big repository.
-      //ref: https://github.com/josa42/coc-go/issues/83#issue-631486225
+      // Calm down too much memory and cpu consumption on big repository.
+      // ref: https://github.com/josa42/coc-go/issues/83#issue-631486225
       //"disableWorkspaceFolders": true,
-      //"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+
+      // Support nested go.mod structures.
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     },
     "bash": {
